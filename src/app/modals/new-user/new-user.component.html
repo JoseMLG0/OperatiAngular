@@ -1,0 +1,24 @@
+<div class="modal-header">
+    <h4 class="modal-title">Registrar usuario!</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss()"></button>
+</div>
+<div class="modal-body">
+    <form [formGroup]="form" (submit)="uploadData()">
+        <div class="form-group mb-3">
+            <label for="nombreInput">Nombre</label>
+            <input type="text" class="form-control" id="nombreInput" placeholder="Ingresar nombre" formControlName="fullName">
+        </div>
+        <div class="form-group mb-3">
+            <label for="correoInput">Correo Electronico</label>
+            <input type="email" class="form-control" id="correoInput" placeholder="nombre@correo.com" formControlName="email">
+        </div>
+        <div class="form-group mb-3">
+            <label for="passwordInput">Contraseña</label>
+            <input type="password" class="form-control" id="passwordInput" placeholder="Contraseña" formControlName="pass">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" [disabled]="!form.valid">Submit</button>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close()">Close</button>
+</div>

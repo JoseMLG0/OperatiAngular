@@ -1,0 +1,17 @@
+<button class="btn btn-lg btn-outline-primary" (click)="open()">Registrar usuario</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Correo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users$ | async" >
+        <th scope="row">1</th>
+        <td>{{user.fullName}}</td>
+        <td>{{user.email}}</td>
+      </tr>
+    </tbody>
+  </table>
